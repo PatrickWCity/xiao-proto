@@ -1,9 +1,110 @@
 <template>
-  <section class="container"></section>
+  <section class="container">
+    <div>
+      <h1>{{ $route.params.slug }}</h1>
+    </div>
+    <p>{{ getVehiculoBySlug($route.params.slug) }}</p>
+    <table v-if="vehiculo" class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Slug</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ vehiculo.id }}</td>
+          <td>{{ vehiculo.marca }}</td>
+          <td>{{ vehiculo.modelo }}</td>
+          <td>{{ vehiculo.slug }}</td>
+          <td>
+            <router-link :to="`/vehiculos/${vehiculo.id}/edit`"
+              >Edit</router-link
+            >
+          </td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-link"
+              @click="deleteCategory(vehiculo.id, vehiculo.marca)"
+            >
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 </template>
 
 <script>
-export default {}
-</script>
+import { mapState, mapActions, mapGetters } from 'vuex'
+import slug from '~/plugins/slug'
 
-<style></style>
+export default {
+  validate({ params }) {
+    if (slug(params.slug) === params.slug) {
+      return true
+    } else {
+      return false
+    }
+  },
+  data() {
+    return {
+      title: 'Detalles de Vehículo'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        { name: 'twitter:title', content: 'My custom description' },
+        { name: 'twitter:description', content: 'My custom description' },
+        { name: 'twitter:image', content: 'My custom description' },
+        { name: 'twitter:card', content: 'My custom description' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'My custom description'
+        }
+      ]
+    }
+  },
+  computed: {
+    ...mapGetters('vehiculos', [
+      'countVehiculos',
+      'getVehiculoById',
+      'getSomeVehiculoById',
+      'getVehiculoBySlug'
+    ]),
+    ...mapState('vehiculos', ['vehiculos', 'readSuccessful']),
+    vehiculo: {
+      get() {
+        return this.getVehiculoBySlug(this.$route.params.slug)
+      },
+      set(newValue) {
+        const names = newValue
+        this.firstName = names[0]
+        this.lastName = names[names.length - 1]
+      }
+    }
+  },
+  created() {
+    if (this.countVehiculos === 0) {
+      this.getAllVehiculos()
+    }
+  },
+  methods: {
+    ...mapActions('vehiculos', [
+      'getAllVehiculos',
+      'deleteVehiculo',
+      'createVehiculo',
+      'editVehiculo'
+    ])
+  }
+}
+</script>

@@ -29,7 +29,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/firebase.js', { src: '~/plugins/slug.js', ssr: false }],
 
   /*
    ** Nuxt.js modules
@@ -39,6 +39,19 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxtjs/pwa'
   ],
+
+  icon: {
+    // Icon options
+    iconSrc: './static/icon.png'
+  },
+
+  manifest: {
+    name: 'Xiao Prototype',
+    short_name: 'Xiao',
+    start_url: '/',
+    lang: 'en',
+    theme_color: '#202225'
+  },
 
   /*
    ** Build configuration
@@ -58,5 +71,6 @@ export default {
         })
       }
     }
-  }
+  },
+  serverMiddleware: ['redirect-ssl']
 }
