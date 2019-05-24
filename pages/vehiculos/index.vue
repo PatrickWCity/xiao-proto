@@ -118,7 +118,11 @@ export default {
       title: this.title,
       meta: [
         { hid: 'og:title', name: 'og:title', content: 'My custom description' },
-        { hid: 'og:description', name: 'og:description', content: 'My custom description' },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'My custom description'
+        },
         { hid: 'og:image', name: 'og:image', content: 'My custom description' },
         { hid: 'og:url', name: 'og:url', content: 'My custom description' },
         {
