@@ -61,7 +61,7 @@
               />
               <div class="card-body">
                 <p class="card-text">
-                  marca: {{ item.marca }} modelo: {{ item.modelo }}
+                  Marca: {{ item.marca }} Modelo: {{ item.modelo }}
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
