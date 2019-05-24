@@ -62,10 +62,10 @@ export default {
     return {
       title: this.title,
       meta: [
-        { name: 'twitter:title', content: 'My custom description' },
-        { name: 'twitter:description', content: 'My custom description' },
-        { name: 'twitter:image', content: 'My custom description' },
-        { name: 'twitter:card', content: 'My custom description' },
+        { hid: 'og:title', name: 'og:title', content: 'My custom description' },
+        { hid: 'og:description', name: 'og:description', content: 'My custom description' },
+        { hid: 'og:image', name: 'og:image', content: 'My custom description' },
+        { hid: 'og:url', name: 'og:url', content: 'My custom description' },
         {
           hid: 'description',
           name: 'description',
