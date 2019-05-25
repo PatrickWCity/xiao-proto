@@ -7,11 +7,6 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
             <li class="nav-item">
-              <nuxt-link class="nav-link" to="/empleos" active-class="active">
-                Empleos
-              </nuxt-link>
-            </li>
-            <li class="nav-item">
               <nuxt-link class="nav-link" to="/vehiculos" active-class="active">
                 Vehículos
               </nuxt-link>
@@ -27,17 +22,15 @@
             </li>
           </b-navbar-nav>
           <b-navbar-nav class="ml-auto">
-            <li class="nav-item">
+            <li class="nav-item mx-auto">
               <nuxt-link class="btn btn-warning" to="/cart" role="button">
-                <font-awesome-icon :icon="['fas', 'shopping-cart']" />Carrito
+                <font-awesome-icon :icon="['fas', 'shopping-cart']" /> Carrito
                 <span class="badge badge-light">
                   3
                 </span>
               </nuxt-link>
-            </li>
-            <li class="nav-item">
-              <nuxt-link class="nav-link" to="/checkout" active-class="active">
-                Checkout
+              <nuxt-link class="btn btn-secondary" to="/checkout" role="button">
+                <font-awesome-icon :icon="['fas', 'check']" /> Checkout
               </nuxt-link>
             </li>
           </b-navbar-nav>
