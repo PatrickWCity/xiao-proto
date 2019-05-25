@@ -1,6 +1,7 @@
 <template>
   <div>
-    <section class="container">
+    <section class="container py-4">
+      <b-breadcrumb :items="items"></b-breadcrumb>
       <div>
         <h1>Listado de Vehículos</h1>
       </div>
@@ -95,7 +96,17 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 export default {
   data() {
     return {
-      title: 'Listado de Vehículos'
+      title: 'Listado de Vehículos',
+      items: [
+        {
+          text: 'Inicio',
+          href: '/'
+        },
+        {
+          text: 'Vehículos',
+          active: true
+        }
+      ]
     }
   },
   computed: {

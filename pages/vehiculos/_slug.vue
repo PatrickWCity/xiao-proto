@@ -1,5 +1,6 @@
 <template>
-  <section class="container">
+  <section class="container py-4">
+    <b-breadcrumb :items="items"></b-breadcrumb>
     <div>
       <h1>{{ $route.params.slug }}</h1>
     </div>
@@ -55,7 +56,21 @@ export default {
   },
   data() {
     return {
-      title: 'Detalles de Vehículo'
+      title: 'Detalles de Vehículo',
+      items: [
+        {
+          text: 'Inicio',
+          href: '/'
+        },
+        {
+          text: 'Vehiculos',
+          href: '/vehiculos'
+        },
+        {
+          text: this.$route.params.slug,
+          active: true
+        }
+      ]
     }
   },
   head() {

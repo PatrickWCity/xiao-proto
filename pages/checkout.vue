@@ -1,5 +1,6 @@
 <template>
-  <section class="container">
+  <section class="container py-4">
+    <b-breadcrumb :items="items"></b-breadcrumb>
     <div>
       <h1 class="title">
         Checkout
@@ -364,7 +365,43 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      title: 'Checkout',
+      items: [
+        {
+          text: 'Inicio',
+          href: '/'
+        },
+        {
+          text: 'Checkout',
+          active: true
+        }
+      ]
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'og:title', name: 'og:title', content: 'My custom description' },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'My custom description'
+        },
+        { hid: 'og:image', name: 'og:image', content: 'My custom description' },
+        { hid: 'og:url', name: 'og:url', content: 'My custom description' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'My custom description'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style></style>

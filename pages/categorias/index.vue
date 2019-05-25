@@ -8,14 +8,14 @@
 export default {
   data() {
     return {
-      title: 'Listado de Empleos',
+      title: 'Listado de Categorías',
       items: [
         {
           text: 'Inicio',
           href: '/'
         },
         {
-          text: 'Empleos',
+          text: 'Categorías',
           active: true
         }
       ]

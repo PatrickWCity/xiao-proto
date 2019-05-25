@@ -1,6 +1,7 @@
 <template>
   <section class="container py-4">
     <b-breadcrumb :items="items"></b-breadcrumb>
+    <div></div>
   </section>
 </template>
 
@@ -8,14 +9,14 @@
 export default {
   data() {
     return {
-      title: 'Listado de Empleos',
+      title: 'Listado de Carrito',
       items: [
         {
           text: 'Inicio',
           href: '/'
         },
         {
-          text: 'Empleos',
+          text: 'Carrito',
           active: true
         }
       ]

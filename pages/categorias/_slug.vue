@@ -5,17 +5,30 @@
 </template>
 
 <script>
+import slug from '~/plugins/slug'
+
 export default {
+  validate({ params }) {
+    if (slug(params.slug) === params.slug) {
+      return true
+    } else {
+      return false
+    }
+  },
   data() {
     return {
-      title: 'Listado de Empleos',
+      title: 'Detalles de Vehículo',
       items: [
         {
           text: 'Inicio',
           href: '/'
         },
         {
-          text: 'Empleos',
+          text: 'Categorías',
+          href: '/categorias'
+        },
+        {
+          text: this.$route.params.slug,
           active: true
         }
       ]
