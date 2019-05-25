@@ -27,12 +27,14 @@
             </li>
           </b-navbar-nav>
           <b-navbar-nav class="ml-auto">
-            <nuxt-link class="btn btn-success" to="/cart" role="button">
-              <font-awesome-icon :icon="['fas', 'shopping-cart']" />Carrito
-              <span class="badge badge-light">
-                3
-              </span>
-            </nuxt-link>
+            <li class="nav-item">
+              <nuxt-link class="btn btn-warning" to="/cart" role="button">
+                <font-awesome-icon :icon="['fas', 'shopping-cart']" />Carrito
+                <span class="badge badge-light">
+                  3
+                </span>
+              </nuxt-link>
+            </li>
             <li class="nav-item">
               <nuxt-link class="nav-link" to="/checkout" active-class="active">
                 Checkout
