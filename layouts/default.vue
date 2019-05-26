@@ -37,9 +37,7 @@
                   ></path>
                 </svg>
                 Carrito
-                <span class="badge badge-light">
-                  3
-                </span>
+                <b-badge variant="light">3</b-badge>
               </nuxt-link>
               <nuxt-link class="btn btn-secondary" to="/checkout" role="button">
                 <svg

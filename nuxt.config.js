@@ -57,6 +57,7 @@ export default {
    ** Build configuration
    */
   build: {
+    publicPath: 'https://xiao-proto.herokuapp.com',
     /*
      ** You can extend webpack config here
      */
