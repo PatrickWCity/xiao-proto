@@ -37,13 +37,7 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    '@nuxtjs/pwa',
-    [
-      'nuxt-fontawesome',
-      {
-        imports: [{ set: '@fortawesome/free-solid-svg-icons', icons: ['fas'] }]
-      }
-    ]
+    '@nuxtjs/pwa'
   ],
 
   icon: {
