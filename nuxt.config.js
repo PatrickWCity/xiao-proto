@@ -57,7 +57,7 @@ export default {
    ** Build configuration
    */
   build: {
-    publicPath: 'https://xiao-proto.herokuapp.com',
+    publicPath: 'https://xiao-proto.herokuapp.com/_nuxt',
     /*
      ** You can extend webpack config here
      */
