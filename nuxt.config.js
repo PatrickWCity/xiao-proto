@@ -64,7 +64,6 @@ export default {
    ** Build configuration
    */
   build: {
-    publicPath: 'https://xiao-proto.netlify.com',
     /*
      ** You can extend webpack config here
      */
