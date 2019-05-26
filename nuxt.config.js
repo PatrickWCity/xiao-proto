@@ -37,8 +37,15 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    hostname: 'https://xiao-proto.herokuapp.com',
+    gzip: true,
+    exclude: ['/categorias/**', '/vehiculos/**']
+  },
 
   icon: {
     // Icon options
@@ -57,7 +64,7 @@ export default {
    ** Build configuration
    */
   build: {
-    publicPath: 'https://xiao-proto.herokuapp.com/_nuxt',
+    publicPath: 'https://xiao-proto.netlify.com',
     /*
      ** You can extend webpack config here
      */

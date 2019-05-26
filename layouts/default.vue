@@ -23,7 +23,12 @@
           </b-navbar-nav>
           <b-navbar-nav class="ml-auto">
             <li class="nav-item mx-auto">
-              <nuxt-link class="btn btn-warning" to="/cart" role="button">
+              <nuxt-link
+                class="btn btn-warning"
+                to="/cart"
+                role="button"
+                active-class="active"
+              >
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -39,7 +44,12 @@
                 Carrito
                 <b-badge variant="light">3</b-badge>
               </nuxt-link>
-              <nuxt-link class="btn btn-secondary" to="/checkout" role="button">
+              <nuxt-link
+                class="btn btn-secondary"
+                to="/checkout"
+                role="button"
+                active-class="active"
+              >
                 <svg
                   aria-hidden="true"
                   focusable="false"
