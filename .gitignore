@@ -82,6 +82,3 @@ dist
 
 # Service worker
 sw.*
-
-# firebase folder
-.firebase
