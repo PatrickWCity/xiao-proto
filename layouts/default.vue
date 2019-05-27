@@ -84,16 +84,31 @@ body {
 svg:not(:root).svg-inline--fa {
   overflow: visible;
 }
+.svg-inline--fa.fa-w-12 {
+  width: 0.75em;
+}
+.svg-inline--fa.fa-w-14 {
+  width: 0.875em;
+}
 .svg-inline--fa.fa-w-16 {
   width: 1em;
 }
+.svg-inline--fa.fa-w-17 {
+  width: 1.0625em;
+}
 .svg-inline--fa.fa-w-18 {
   width: 1.125em;
+}
+.svg-inline--fa.fa-w-20 {
+  width: 1.25em;
 }
 .svg-inline--fa {
   display: inline-block;
   font-size: inherit;
   height: 1em;
   vertical-align: -0.125em;
+}
+.fa-2x {
+  font-size: 2em;
 }
 </style>
