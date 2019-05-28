@@ -46,7 +46,9 @@ export const actions = {
           modelo: doc.data().modelo,
           anno: doc.data().anno,
           precio: doc.data().precio,
-          slug: doc.data().slug
+          slug: doc.data().slug,
+          fecha_creada: doc.data().fecha_creada.toDate(),
+          fecha_actualizada: doc.data().fecha_actualizada.toDate()
         })
       })
       commit('SETVEHICULOS', data)
@@ -63,7 +65,9 @@ export const actions = {
       modelo: 'm3',
       anno: 2018,
       precio: 7500000,
-      slug: slug('BMW m3 GTR')
+      slug: slug('BMW m3 GTR'),
+      fecha_creada: db.Timestamp.fromDate(new Date()),
+      fecha_actualizada: null
     }
     ref
       .set(doc)
@@ -82,7 +86,9 @@ export const actions = {
         modelo: 'bens s300',
         anno: 2019,
         precio: 6999999,
-        slug: slug('mercedes s300')
+        slug: slug('mercedes s300'),
+        // fecha_creada: db.Timestamp.fromDate(new Date()),
+        fecha_actualizada: db.Timestamp.fromDate(new Date())
       })
       .then(() => {
         commit('UPDATEVEHICULO', true)
