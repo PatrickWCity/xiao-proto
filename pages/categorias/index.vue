@@ -1,5 +1,5 @@
 <template>
-  <section class="container py-3">
+  <section class="p-3">
     <b-breadcrumb :items="items"></b-breadcrumb>
     <div class="row">
       <div class="col-12 col-sm-3">

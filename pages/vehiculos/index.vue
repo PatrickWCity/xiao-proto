@@ -1,9 +1,9 @@
 <template>
   <div>
-    <section class="container py-3">
+    <section class="p-3">
       <b-breadcrumb :items="items"></b-breadcrumb>
       <div class="row">
-        <div class="col-12 col-sm-3">
+        <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-5">
           <div class="card bg-light mb-3">
             <div class="card-header bg-primary text-white text-uppercase">
               <svg
@@ -18,7 +18,7 @@
                   d="M128 116V76c0-8.837 7.163-16 16-16h352c8.837 0 16 7.163 16 16v40c0 8.837-7.163 16-16 16H144c-8.837 0-16-7.163-16-16zm16 176h352c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h352c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zM16 144h64c8.837 0 16-7.163 16-16V64c0-8.837-7.163-16-16-16H16C7.163 48 0 55.163 0 64v64c0 8.837 7.163 16 16 16zm0 160h64c8.837 0 16-7.163 16-16v-64c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v64c0 8.837 7.163 16 16 16zm0 160h64c8.837 0 16-7.163 16-16v-64c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v64c0 8.837 7.163 16 16 16z"
                 ></path>
               </svg>
-              Categories
+              Categorias
             </div>
             <ul class="list-group category_block">
               <li class="list-group-item">
@@ -58,7 +58,11 @@
         </div>
         <div class="col">
           <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
+            <div
+              v-for="item in vehiculos"
+              :key="item.id"
+              class="col-12 col-md-6 col-lg-4 col-xl-3"
+            >
               <div class="card">
                 <img
                   class="card-img-top"
@@ -67,171 +71,23 @@
                 />
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="product.html" title="View Product"
-                      >Product title</a
-                    >
+                    <nuxt-link :to="`/vehiculos/${item.slug}`">
+                      {{ item.marca }} {{ item.modelo }} {{ item.anno }}
+                    </nuxt-link>
                   </h4>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Marca: {{ item.marca }} Modelo: {{ item.modelo }} Año:
+                    {{ item.anno }}
                   </p>
                   <div class="row">
                     <div class="col">
-                      <p class="btn btn-danger btn-block">99.00 $</p>
+                      <p class="btn btn-danger btn-block">
+                        {{ item.precio }} $CLP
+                      </p>
                     </div>
                     <div class="col">
                       <a href="#" class="btn btn-success btn-block"
-                        >Add to cart</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="https://dummyimage.com/600x400/55595c/fff"
-                  alt="Card image cap"
-                />
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="product.html" title="View Product"
-                      >Product title</a
-                    >
-                  </h4>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <div class="row">
-                    <div class="col">
-                      <p class="btn btn-danger btn-block">99.00 $</p>
-                    </div>
-                    <div class="col">
-                      <a href="#" class="btn btn-success btn-block"
-                        >Add to cart</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="https://dummyimage.com/600x400/55595c/fff"
-                  alt="Card image cap"
-                />
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="product.html" title="View Product"
-                      >Product title</a
-                    >
-                  </h4>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <div class="row">
-                    <div class="col">
-                      <p class="btn btn-danger btn-block">99.00 $</p>
-                    </div>
-                    <div class="col">
-                      <a href="#" class="btn btn-success btn-block"
-                        >Add to cart</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="https://dummyimage.com/600x400/55595c/fff"
-                  alt="Card image cap"
-                />
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="product.html" title="View Product"
-                      >Product title</a
-                    >
-                  </h4>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <div class="row">
-                    <div class="col">
-                      <p class="btn btn-danger btn-block">99.00 $</p>
-                    </div>
-                    <div class="col">
-                      <a href="#" class="btn btn-success btn-block"
-                        >Add to cart</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="https://dummyimage.com/600x400/55595c/fff"
-                  alt="Card image cap"
-                />
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="product.html" title="View Product"
-                      >Product title</a
-                    >
-                  </h4>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <div class="row">
-                    <div class="col">
-                      <p class="btn btn-danger btn-block">99.00 $</p>
-                    </div>
-                    <div class="col">
-                      <a href="#" class="btn btn-success btn-block"
-                        >Add to cart</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="https://dummyimage.com/600x400/55595c/fff"
-                  alt="Card image cap"
-                />
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="product.html" title="View Product"
-                      >Product title</a
-                    >
-                  </h4>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <div class="row">
-                    <div class="col">
-                      <p class="btn btn-danger btn-block">99.00 $</p>
-                    </div>
-                    <div class="col">
-                      <a href="#" class="btn btn-success btn-block"
-                        >Add to cart</a
+                        >Agregar al Carrito</a
                       >
                     </div>
                   </div>

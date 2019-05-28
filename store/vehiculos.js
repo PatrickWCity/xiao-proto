@@ -44,6 +44,8 @@ export const actions = {
           id: doc.id,
           marca: doc.data().marca,
           modelo: doc.data().modelo,
+          anno: doc.data().anno,
+          precio: doc.data().precio,
           slug: doc.data().slug
         })
       })
@@ -57,9 +59,11 @@ export const actions = {
   createVehiculo({ commit }) {
     const ref = db.collection('vehiculos').doc('test')
     const doc = {
-      marca: 'bmw',
+      marca: 'BMW',
       modelo: 'm3',
-      slug: slug('unicode ♥ is ☢')
+      anno: 2018,
+      precio: 7500000,
+      slug: slug('BMW m3 GTR')
     }
     ref
       .set(doc)
@@ -74,9 +78,11 @@ export const actions = {
     db.collection('vehiculos')
       .doc('test')
       .update({
-        marca: 'voom',
-        modelo: 'speed',
-        slug: slug('fuck')
+        marca: 'mercedes',
+        modelo: 'bens s300',
+        anno: 2019,
+        precio: 6999999,
+        slug: slug('mercedes s300')
       })
       .then(() => {
         commit('UPDATEVEHICULO', true)

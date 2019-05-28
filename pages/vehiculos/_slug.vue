@@ -306,6 +306,8 @@
           <th>ID</th>
           <th>Marca</th>
           <th>Modelo</th>
+          <th>Año</th>
+          <th>Precio</th>
           <th>Slug</th>
           <th>Edit</th>
           <th>Delete</th>
@@ -316,6 +318,8 @@
           <td>{{ vehiculo.id }}</td>
           <td>{{ vehiculo.marca }}</td>
           <td>{{ vehiculo.modelo }}</td>
+          <td>{{ vehiculo.anno }}</td>
+          <td>{{ vehiculo.precio }}</td>
           <td>{{ vehiculo.slug }}</td>
           <td>
             <router-link :to="`/vehiculos/${vehiculo.id}/edit`"
