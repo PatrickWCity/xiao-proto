@@ -2,9 +2,7 @@
   <section class="container py-3">
     <b-breadcrumb :items="items"></b-breadcrumb>
     <div>
-      <h1 class="title">
-        Checkout
-      </h1>
+      <h1 class="title">Checkout</h1>
 
       <div class="row py-5">
         <div class="col-md-4 order-md-2 mb-4">
@@ -68,7 +66,7 @@
         </div>
         <div class="col-md-8 order-md-1">
           <h4 class="mb-3">Billing address</h4>
-          <form class="needs-validation" novalidate="">
+          <form class="needs-validation" novalidate>
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
@@ -76,10 +74,10 @@
                   id="firstName"
                   type="text"
                   class="form-control"
-                  placeholder=""
-                  value=""
-                  required=""
-                  style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg=="); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;'
+                  placeholder
+                  value
+                  required
+                  style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg=='); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
                 />
                 <div class="invalid-feedback">
                   Valid first name is required.
@@ -91,13 +89,11 @@
                   id="lastName"
                   type="text"
                   class="form-control"
-                  placeholder=""
-                  value=""
-                  required=""
+                  placeholder
+                  value
+                  required
                 />
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
+                <div class="invalid-feedback">Valid last name is required.</div>
               </div>
             </div>
 
@@ -112,7 +108,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Username"
-                  required=""
+                  required
                 />
                 <div class="invalid-feedback" style="width: 100%;">
                   Your username is required.
@@ -121,9 +117,10 @@
             </div>
 
             <div class="mb-3">
-              <label for="email"
-                >Email <span class="text-muted">(Optional)</span></label
-              >
+              <label for="email">
+                Email
+                <span class="text-muted">(Optional)</span>
+              </label>
               <input
                 id="email"
                 type="email"
@@ -142,7 +139,7 @@
                 type="text"
                 class="form-control"
                 placeholder="1234 Main St"
-                required=""
+                required
               />
               <div class="invalid-feedback">
                 Please enter your shipping address.
@@ -150,9 +147,10 @@
             </div>
 
             <div class="mb-3">
-              <label for="address2"
-                >Address 2 <span class="text-muted">(Optional)</span></label
-              >
+              <label for="address2">
+                Address 2
+                <span class="text-muted">(Optional)</span>
+              </label>
               <input
                 id="address2"
                 type="text"
@@ -167,9 +165,9 @@
                 <select
                   id="country"
                   class="custom-select d-block w-100"
-                  required=""
+                  required
                 >
-                  <option value="">Choose...</option>
+                  <option value>Choose...</option>
                   <option>United States</option>
                 </select>
                 <div class="invalid-feedback">
@@ -178,12 +176,8 @@
               </div>
               <div class="col-md-4 mb-3">
                 <label for="state">State</label>
-                <select
-                  id="state"
-                  class="custom-select d-block w-100"
-                  required=""
-                >
-                  <option value="">Choose...</option>
+                <select id="state" class="custom-select d-block w-100" required>
+                  <option value>Choose...</option>
                   <option>California</option>
                 </select>
                 <div class="invalid-feedback">
@@ -196,12 +190,10 @@
                   id="zip"
                   type="text"
                   class="form-control"
-                  placeholder=""
-                  required=""
+                  placeholder
+                  required
                 />
-                <div class="invalid-feedback">
-                  Zip code required.
-                </div>
+                <div class="invalid-feedback">Zip code required.</div>
               </div>
             </div>
             <hr class="mb-4" />
@@ -236,8 +228,8 @@
                   name="paymentMethod"
                   type="radio"
                   class="custom-control-input"
-                  checked=""
-                  required=""
+                  checked
+                  required
                 />
                 <label class="custom-control-label" for="transbank"
                   >Transbank</label
@@ -249,7 +241,7 @@
                   name="paymentMethod"
                   type="radio"
                   class="custom-control-input"
-                  required=""
+                  required
                 />
                 <label class="custom-control-label" for="alipay">Alipay</label>
               </div>
@@ -259,7 +251,7 @@
                   name="paymentMethod"
                   type="radio"
                   class="custom-control-input"
-                  required=""
+                  required
                 />
                 <label class="custom-control-label" for="paypal">Paypal</label>
               </div>
@@ -269,7 +261,7 @@
                   name="paymentMethod"
                   type="radio"
                   class="custom-control-input"
-                  required=""
+                  required
                 />
                 <label class="custom-control-label" for="stripe">Stripe</label>
               </div>
@@ -279,7 +271,7 @@
                   name="paymentMethod"
                   type="radio"
                   class="custom-control-input"
-                  required=""
+                  required
                 />
                 <label class="custom-control-label" for="khipu">khipu</label>
               </div>
@@ -289,7 +281,7 @@
                   name="paymentMethod"
                   type="radio"
                   class="custom-control-input"
-                  required=""
+                  required
                 />
                 <label class="custom-control-label" for="mercado-pago"
                   >Mercado Pago</label
@@ -303,13 +295,11 @@
                   id="cc-name"
                   type="text"
                   class="form-control"
-                  placeholder=""
-                  required=""
+                  placeholder
+                  required
                 />
                 <small class="text-muted">Full name as displayed on card</small>
-                <div class="invalid-feedback">
-                  Name on card is required
-                </div>
+                <div class="invalid-feedback">Name on card is required</div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="cc-number">Credit card number</label>
@@ -317,8 +307,8 @@
                   id="cc-number"
                   type="text"
                   class="form-control"
-                  placeholder=""
-                  required=""
+                  placeholder
+                  required
                 />
                 <div class="invalid-feedback">
                   Credit card number is required
@@ -332,12 +322,10 @@
                   id="cc-expiration"
                   type="text"
                   class="form-control"
-                  placeholder=""
-                  required=""
+                  placeholder
+                  required
                 />
-                <div class="invalid-feedback">
-                  Expiration date required
-                </div>
+                <div class="invalid-feedback">Expiration date required</div>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="cc-expiration">CVV</label>
@@ -345,12 +333,10 @@
                   id="cc-cvv"
                   type="text"
                   class="form-control"
-                  placeholder=""
-                  required=""
+                  placeholder
+                  required
                 />
-                <div class="invalid-feedback">
-                  Security code required
-                </div>
+                <div class="invalid-feedback">Security code required</div>
               </div>
             </div>
             <hr class="mb-4" />
