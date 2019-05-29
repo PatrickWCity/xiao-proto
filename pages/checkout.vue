@@ -1,6 +1,11 @@
 <template>
   <section class="container py-3">
-    <b-breadcrumb :items="items"></b-breadcrumb>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><nuxt-link to="/">Inicio</nuxt-link></li>
+        <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+      </ol>
+    </nav>
     <div>
       <h1 class="title">Checkout</h1>
 
@@ -354,17 +359,7 @@
 export default {
   data() {
     return {
-      title: 'Checkout',
-      items: [
-        {
-          text: 'Inicio',
-          href: '/'
-        },
-        {
-          text: 'Checkout',
-          active: true
-        }
-      ]
+      title: 'Checkout'
     }
   },
   head() {

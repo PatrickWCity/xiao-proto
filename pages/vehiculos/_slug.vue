@@ -1,6 +1,12 @@
 <template>
   <section class="container py-3">
-    <b-breadcrumb :items="items"></b-breadcrumb>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><nuxt-link to="/">Inicio</nuxt-link></li>
+        <li class="breadcrumb-item"><nuxt-link to="/vehiculos">Vehículos</nuxt-link></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ $route.params.slug }}</li>
+      </ol>
+    </nav>
     <div class="row">
       <!-- Image -->
       <div class="col-12 col-lg-6">
@@ -353,21 +359,7 @@ export default {
   },
   data() {
     return {
-      title: 'Detalles de Vehículo',
-      items: [
-        {
-          text: 'Inicio',
-          href: '/'
-        },
-        {
-          text: 'Vehiculos',
-          href: '/vehiculos'
-        },
-        {
-          text: this.$route.params.slug,
-          active: true
-        }
-      ]
+      title: 'Detalles de Vehículo'
     }
   },
   head() {

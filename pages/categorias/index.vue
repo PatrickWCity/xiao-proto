@@ -1,6 +1,11 @@
 <template>
   <section class="p-3">
-    <b-breadcrumb :items="items"></b-breadcrumb>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><nuxt-link to="/">Inicio</nuxt-link></li>
+        <li class="breadcrumb-item active" aria-current="page">Categorías</li>
+      </ol>
+    </nav>
     <div class="row">
       <SideCategoryList />
       <div class="col">
@@ -138,17 +143,7 @@ export default {
   },
   data() {
     return {
-      title: 'Listado de Categorías',
-      items: [
-        {
-          text: 'Inicio',
-          href: '/'
-        },
-        {
-          text: 'Categorías',
-          active: true
-        }
-      ]
+      title: 'Listado de Categorías'
     }
   },
   computed: {
