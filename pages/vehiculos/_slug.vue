@@ -185,13 +185,8 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('vehiculos', [
-      'countVehiculos',
-      'getVehiculoById',
-      'getSomeVehiculoById',
-      'getVehiculoBySlug'
-    ]),
-    ...mapState('vehiculos', ['vehiculos', 'readSuccessful']),
+    ...mapGetters('vehiculos', ['countVehiculos', 'getVehiculoBySlug']),
+    ...mapState('vehiculos', ['vehiculos']),
     vehiculo: {
       get() {
         return this.getVehiculoBySlug(this.$route.params.slug)
@@ -204,12 +199,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions('vehiculos', [
-      'getAllVehiculos',
-      'deleteVehiculo',
-      'createVehiculo',
-      'editVehiculo'
-    ])
+    ...mapActions('vehiculos', ['getAllVehiculos'])
   }
 }
 </script>

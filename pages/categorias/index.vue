@@ -46,19 +46,8 @@ export default {
     }
   },
   computed: {
-    ...mapState('categorias', [
-      'categorias',
-      'readSuccessful',
-      'writeSuccessful',
-      'deleteSuccessful',
-      'updateSuccessful'
-    ]),
-    ...mapGetters('categorias', [
-      'countCategorias',
-      'getCategoriaById',
-      'getSomeCategoriaById',
-      'getCategoriaBySlug'
-    ])
+    ...mapState('categorias', ['categorias']),
+    ...mapGetters('categorias', ['countCategorias'])
   },
   head() {
     return {
@@ -86,13 +75,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions('categorias', [
-      'getAllCategorias',
-      'deleteCategoria',
-      'createCategoria',
-      'editCategoria',
-      'test'
-    ])
+    ...mapActions('categorias', ['getAllCategorias'])
   }
 }
 </script>
