@@ -47,8 +47,20 @@ export const actions = {
           anno: doc.data().anno,
           precio: doc.data().precio,
           slug: doc.data().slug,
-          fecha_creada: doc.data().fecha_creada.toDate(),
-          fecha_actualizada: doc.data().fecha_actualizada.toDate()
+          cilindros: doc.data().cilindros,
+          ciudad: doc.data().ciudad,
+          color: doc.data().color,
+          combustible: doc.data().combustible,
+          consumo: doc.data().consumo,
+          estado: doc.data().estado,
+          imagen: doc.data().imagen,
+          kilometraje: doc.data().kilometraje,
+          litros: doc.data().litros,
+          pasajeros: doc.data().pasajeros,
+          puertas: doc.data().puertas,
+          region: doc.data().region,
+          tipo: doc.data().tipo,
+          transmision: doc.data().transmision
         })
       })
       commit('SETVEHICULOS', data)

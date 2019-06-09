@@ -3,8 +3,12 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><nuxt-link to="/">Inicio</nuxt-link></li>
-        <li class="breadcrumb-item"><nuxt-link to="/categorias">Categorías</nuxt-link></li>
-        <li class="breadcrumb-item active" aria-current="page">{{ $route.params.slug }}</li>
+        <li class="breadcrumb-item">
+          <nuxt-link to="/categorias">Categorías</nuxt-link>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {{ $route.params.slug }}
+        </li>
       </ol>
     </nav>
     <div class="row">

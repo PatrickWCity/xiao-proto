@@ -19,13 +19,13 @@
               <div class="card">
                 <img
                   class="card-img-top"
-                  src="https://dummyimage.com/600x400/55595c/fff"
+                  :src="`${item.imagen}`"
                   alt="Card image cap"
                 />
                 <div class="card-body">
                   <h4 class="card-title">
                     <nuxt-link :to="`/vehiculos/${item.slug}`">
-                      {{ item.marca }} {{ item.modelo }} {{ item.anno }}
+                      {{ item.anno }} {{ item.marca }} {{ item.modelo }}
                     </nuxt-link>
                   </h4>
                   <p class="card-text">
@@ -39,7 +39,10 @@
                       </p>
                     </div>
                     <div class="col">
-                      <nuxt-link :to="`/vehiculos/${item.slug}`" class="btn btn-success btn-block">
+                      <nuxt-link
+                        :to="`/vehiculos/${item.slug}`"
+                        class="btn btn-success btn-block"
+                      >
                         ver detalles
                       </nuxt-link>
                     </div>
