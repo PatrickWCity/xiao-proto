@@ -28,7 +28,9 @@
             <br />
             <dl class="row">
               <dt class="col-5">Precio:</dt>
-              <dd class="col-7">{{ vehiculo.precio.toLocaleString('es') }} $CLP</dd>
+              <dd class="col-7">
+                {{ vehiculo.precio.toLocaleString('es') }} $CLP
+              </dd>
               <dt class="col-5">Tipo:</dt>
               <dd class="col-7">{{ vehiculo.tipo }}</dd>
               <dt class="col-5">Puertas:</dt>

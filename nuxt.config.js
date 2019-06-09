@@ -8,7 +8,7 @@ export default {
    */
   head: {
     htmlAttrs: {
-      lang: 'es',
+      lang: 'es'
     },
     title: pkg.name,
     meta: [
