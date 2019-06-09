@@ -7,6 +7,9 @@ export default {
    ** Headers of the page
    */
   head: {
+    htmlAttrs: {
+      lang: 'es',
+    },
     title: pkg.name,
     meta: [
       { charset: 'utf-8' },
@@ -56,7 +59,7 @@ export default {
     name: 'Xiao Prototype',
     short_name: 'Xiao',
     start_url: '/',
-    lang: 'en',
+    lang: 'es',
     theme_color: '#202225'
   },
 
