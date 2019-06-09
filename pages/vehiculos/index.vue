@@ -34,7 +34,7 @@
                 <div class="row">
                   <div class="col">
                     <p class="btn btn-danger btn-block">
-                      {{ item.precio.toLocaleString() }} $CLP
+                      {{ item.precio.toLocaleString('es') }} $CLP
                     </p>
                   </div>
                   <div class="col">

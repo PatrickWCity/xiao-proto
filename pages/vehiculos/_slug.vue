@@ -28,7 +28,7 @@
             <br />
             <dl class="row">
               <dt class="col-5">Precio:</dt>
-              <dd class="col-7">{{ vehiculo.precio.toLocaleString() }} $CLP</dd>
+              <dd class="col-7">{{ vehiculo.precio.toLocaleString('es') }} $CLP</dd>
               <dt class="col-5">Tipo:</dt>
               <dd class="col-7">{{ vehiculo.tipo }}</dd>
               <dt class="col-5">Puertas:</dt>
@@ -92,11 +92,11 @@
                 </tr>
                 <tr v-if="vehiculo.precio">
                   <th scope="row">Precio</th>
-                  <td>{{ vehiculo.precio.toLocaleString() }} $CLP</td>
+                  <td>{{ vehiculo.precio.toLocaleString('es') }} $CLP</td>
                 </tr>
                 <tr v-if="vehiculo.kilometraje">
                   <th scope="row">Kilometraje</th>
-                  <td>{{ vehiculo.kilometraje.toLocaleString() }} kms</td>
+                  <td>{{ vehiculo.kilometraje.toLocaleString('es') }} kms</td>
                 </tr>
                 <tr v-if="vehiculo.color">
                   <th scope="row">Color</th>
