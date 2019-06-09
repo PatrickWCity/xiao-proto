@@ -18,7 +18,7 @@
             <div class="card">
               <img
                 class="card-img-top"
-                :src="`${item.imagen}`"
+                :src="item.imagen"
                 alt="Card image cap"
               />
               <div class="card-body">

@@ -15,7 +15,7 @@
       <div class="col-12 col-lg-6">
         <div class="card bg-light mb-3">
           <div class="card-body">
-            <img class="img-fluid" :src="`${vehiculo.imagen}`" />
+            <img class="img-fluid" :src="vehiculo.imagen" />
           </div>
         </div>
       </div>
