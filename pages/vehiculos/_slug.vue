@@ -27,22 +27,22 @@
             </dt>
             <br />
             <dl class="row">
-              <dt class="col-4">Precio:</dt>
-              <dd class="col-8">{{ vehiculo.precio.toLocaleString() }} $CLP</dd>
-              <dt class="col-4">Tipo:</dt>
-              <dd class="col-8">{{ vehiculo.tipo }}</dd>
-              <dt class="col-4">Puertas:</dt>
-              <dd class="col-8">{{ vehiculo.puertas }}</dd>
-              <dt class="col-4">Combustible:</dt>
-              <dd class="col-8">{{ vehiculo.combustible }}</dd>
-              <dt class="col-4">Transmisión:</dt>
-              <dd class="col-8">{{ vehiculo.transmision }}</dd>
-              <dt class="col-4">Color:</dt>
-              <dd class="col-8">{{ vehiculo.color }}</dd>
-              <dt class="col-4">Region:</dt>
-              <dd class="col-8">{{ vehiculo.region }}</dd>
-              <dt class="col-4">Ciudad:</dt>
-              <dd class="col-8">{{ vehiculo.ciudad }}</dd>
+              <dt class="col-5">Precio:</dt>
+              <dd class="col-7">{{ vehiculo.precio.toLocaleString() }} $CLP</dd>
+              <dt class="col-5">Tipo:</dt>
+              <dd class="col-7">{{ vehiculo.tipo }}</dd>
+              <dt class="col-5">Puertas:</dt>
+              <dd class="col-7">{{ vehiculo.puertas }}</dd>
+              <dt class="col-5">Combustible:</dt>
+              <dd class="col-7">{{ vehiculo.combustible }}</dd>
+              <dt class="col-5">Transmisión:</dt>
+              <dd class="col-7">{{ vehiculo.transmision }}</dd>
+              <dt class="col-5">Color:</dt>
+              <dd class="col-7">{{ vehiculo.color }}</dd>
+              <dt class="col-5">Region:</dt>
+              <dd class="col-7">{{ vehiculo.region }}</dd>
+              <dt class="col-5">Ciudad:</dt>
+              <dd class="col-7">{{ vehiculo.ciudad }}</dd>
             </dl>
           </div>
         </div>
