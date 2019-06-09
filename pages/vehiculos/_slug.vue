@@ -397,11 +397,6 @@ export default {
     vehiculo: {
       get() {
         return this.getVehiculoBySlug(this.$route.params.slug)
-      },
-      set(newValue) {
-        const names = newValue
-        this.firstName = names[0]
-        this.lastName = names[names.length - 1]
       }
     }
   },

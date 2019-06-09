@@ -1,16 +1,13 @@
 import { db } from '~/plugins/firebase'
-import slug from '~/plugins/slug'
 
 export const state = () => ({
-  vehiculos: [],
-  readSuccessful: false,
-  writeSuccessful: false,
-  deleteSuccessful: false,
-  updateSuccessful: false
+  vehiculos: []
 })
 
 export const getters = {
   countVehiculos: state => state.vehiculos.length,
+  getVehiculosPorListado: state => estado =>
+    state.vehiculos.filter(vehiculo => vehiculo.estado === estado),
   getVehiculoById: state => id =>
     state.vehiculos.find(vehiculo => vehiculo.id === id),
   getSomeVehiculoById: state => slug =>
@@ -22,16 +19,6 @@ export const getters = {
 export const mutations = {
   SETVEHICULOS(state, data) {
     state.vehiculos = data
-    state.readSuccessful = true
-  },
-  WRITEVEHICULO(state, bool) {
-    state.writeSuccessful = bool
-  },
-  REMOVEVEHICULO(state, bool) {
-    state.deleteSuccessful = bool
-  },
-  UPDATEVEHICULO(state, bool) {
-    state.updateSuccessful = bool
   }
 }
 
@@ -69,55 +56,5 @@ export const actions = {
   stopListening() {
     const unsub = db.collection('vehiculos').onSnapshot(() => {})
     unsub()
-  },
-  createVehiculo({ commit }) {
-    const ref = db.collection('vehiculos').doc('test')
-    const doc = {
-      marca: 'BMW',
-      modelo: 'm3',
-      anno: 2018,
-      precio: 7500000,
-      slug: slug('BMW m3 GTR'),
-      fecha_creada: db.Timestamp.fromDate(new Date()),
-      fecha_actualizada: null
-    }
-    ref
-      .set(doc)
-      .then(() => {
-        commit('WRITEVEHICULO', true)
-      })
-      .catch(() => {
-        commit('WRITEVEHICULO', false)
-      })
-  },
-  editVehiculo({ commit }) {
-    db.collection('vehiculos')
-      .doc('test')
-      .update({
-        marca: 'mercedes',
-        modelo: 'bens s300',
-        anno: 2019,
-        precio: 6999999,
-        slug: slug('mercedes s300'),
-        // fecha_creada: db.Timestamp.fromDate(new Date()),
-        fecha_actualizada: db.Timestamp.fromDate(new Date())
-      })
-      .then(() => {
-        commit('UPDATEVEHICULO', true)
-      })
-      .catch(() => {
-        commit('UPDATEVEHICULO', false)
-      })
-  },
-  deleteVehiculo({ commit }, id) {
-    db.collection('vehiculos')
-      .doc(id)
-      .delete()
-      .then(() => {
-        commit('REMOVEVEHICULO', true)
-      })
-      .catch(() => {
-        commit('REMOVEVEHICULO', false)
-      })
   }
 }

@@ -15,169 +15,40 @@
       <SideCategoryList />
       <div class="col">
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <div
+            v-for="item in vehiculo"
+            :key="item.id"
+            class="col-12 col-md-6 col-lg-4 col-xl-3"
+          >
             <div class="card">
               <img
                 class="card-img-top"
-                src="https://dummyimage.com/600x400/55595c/fff"
+                :src="`${item.imagen}`"
                 alt="Card image cap"
               />
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="product.html" title="View Product">Product title</a>
+                  <nuxt-link :to="`/vehiculos/${item.slug}`">
+                    {{ item.anno }} {{ item.marca }} {{ item.modelo }}
+                  </nuxt-link>
                 </h4>
                 <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Marca: {{ item.marca }} Modelo: {{ item.modelo }} Año:
+                  {{ item.anno }}
                 </p>
                 <div class="row">
                   <div class="col">
-                    <p class="btn btn-danger btn-block">99.00 $</p>
+                    <p class="btn btn-danger btn-block">
+                      {{ item.precio }} $CLP
+                    </p>
                   </div>
                   <div class="col">
-                    <a href="#" class="btn btn-success btn-block"
-                      >Add to cart</a
+                    <nuxt-link
+                      :to="`/vehiculos/${item.slug}`"
+                      class="btn btn-success btn-block"
                     >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-            <div class="card">
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/600x400/55595c/fff"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="product.html" title="View Product">Product title</a>
-                </h4>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div class="row">
-                  <div class="col">
-                    <p class="btn btn-danger btn-block">99.00 $</p>
-                  </div>
-                  <div class="col">
-                    <a href="#" class="btn btn-success btn-block"
-                      >Add to cart</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-            <div class="card">
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/600x400/55595c/fff"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="product.html" title="View Product">Product title</a>
-                </h4>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div class="row">
-                  <div class="col">
-                    <p class="btn btn-danger btn-block">99.00 $</p>
-                  </div>
-                  <div class="col">
-                    <a href="#" class="btn btn-success btn-block"
-                      >Add to cart</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-            <div class="card">
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/600x400/55595c/fff"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="product.html" title="View Product">Product title</a>
-                </h4>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div class="row">
-                  <div class="col">
-                    <p class="btn btn-danger btn-block">99.00 $</p>
-                  </div>
-                  <div class="col">
-                    <a href="#" class="btn btn-success btn-block"
-                      >Add to cart</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-            <div class="card">
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/600x400/55595c/fff"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="product.html" title="View Product">Product title</a>
-                </h4>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div class="row">
-                  <div class="col">
-                    <p class="btn btn-danger btn-block">99.00 $</p>
-                  </div>
-                  <div class="col">
-                    <a href="#" class="btn btn-success btn-block"
-                      >Add to cart</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-            <div class="card">
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/600x400/55595c/fff"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="product.html" title="View Product">Product title</a>
-                </h4>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <div class="row">
-                  <div class="col">
-                    <p class="btn btn-danger btn-block">99.00 $</p>
-                  </div>
-                  <div class="col">
-                    <a href="#" class="btn btn-success btn-block"
-                      >Add to cart</a
-                    >
+                      ver detalles
+                    </nuxt-link>
                   </div>
                 </div>
               </div>
@@ -191,6 +62,7 @@
 
 <script>
 import slug from '~/plugins/slug'
+import { mapState, mapGetters, mapActions } from 'vuex'
 import SideCategoryList from '~/components/SideCategoryList.vue'
 
 export default {
@@ -206,7 +78,17 @@ export default {
   },
   data() {
     return {
-      title: 'Detalles de Vehículo'
+      title: 'Listado de Vehículos ' + this.$route.params.slug,
+      listado: null
+    }
+  },
+  computed: {
+    ...mapState('vehiculos', ['vehiculos']),
+    ...mapGetters('vehiculos', ['countVehiculos', 'getVehiculosPorListado']),
+    vehiculo: {
+      get() {
+        return this.getVehiculosPorListado(this.listado)
+      }
     }
   },
   head() {
@@ -228,8 +110,20 @@ export default {
         }
       ]
     }
+  },
+  created() {
+    if (this.countVehiculos === 0) {
+      this.getAllVehiculos()
+    }
+    if (this.$route.params.slug === 'nuevos') {
+      this.listado = 'nuevo'
+    }
+    if (this.$route.params.slug === 'usados') {
+      this.listado = 'usado'
+    }
+  },
+  methods: {
+    ...mapActions('vehiculos', ['getAllVehiculos'])
   }
 }
 </script>
-
-<style></style>
