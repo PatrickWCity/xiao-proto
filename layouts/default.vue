@@ -87,6 +87,12 @@ svg:not(:root).svg-inline--fa {
   height: 1em;
   vertical-align: -0.125em;
 }
+html,
+body,
+#__nuxt,
+#__layout {
+  height: 100%;
+}
 .footer {
   bottom: 0;
   width: 100%;
