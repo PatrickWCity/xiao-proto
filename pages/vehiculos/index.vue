@@ -9,6 +9,7 @@
     <div class="row">
       <SideCategoryList />
       <div class="col">
+        <h4 class="mb-4">Listado de Vehículos</h4>
         <div class="row">
           <div
             v-for="item in vehiculos"

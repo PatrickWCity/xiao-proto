@@ -2,7 +2,7 @@
   <section class="jumbotron text-center mb-0">
     <div class="container">
       <h1 class="jumbotron-heading text-uppercase">
-        Avisos de Clasificados de Vehículos en Chile.
+        Avisos de Clasificados de Vehículos en Chile
       </h1>
       <h3>
         <small>¡Bienvenidos!</small>
