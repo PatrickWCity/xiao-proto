@@ -1,5 +1,5 @@
 <template>
-  <section class="p-3">
+  <section class="p-3" style="margin-bottom: 176px">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><nuxt-link to="/">Inicio</nuxt-link></li>

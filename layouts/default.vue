@@ -24,7 +24,7 @@
         </b-collapse>
       </b-container>
     </b-navbar>
-    <nuxt style="padding-top: 60px;" />
+    <nuxt />
     <footer class="footer mt-auto font-small unique-color-dark">
       <div class="container text-center text-md-left mt-5">
         <div class="row mt-3">
@@ -56,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div class="footer-copyright text-center py-3">
+      <div class="text-center py-3">
         2019
         <nuxt-link to="/">xiao-proto.herokuapp.com</nuxt-link>
       </div>
@@ -87,14 +87,7 @@ svg:not(:root).svg-inline--fa {
   height: 1em;
   vertical-align: -0.125em;
 }
-html,
-body,
-#__nuxt,
-#__layout {
-  height: 100%;
-}
 .footer {
-  bottom: 0;
   width: 100%;
   background-color: #f5f5f5;
 }
