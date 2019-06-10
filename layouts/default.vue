@@ -24,7 +24,7 @@
         </b-collapse>
       </b-container>
     </b-navbar>
-    <nuxt />
+    <nuxt style="padding-top: 60px;" />
     <footer class="footer mt-auto font-small unique-color-dark">
       <div class="container text-center text-md-left mt-5">
         <div class="row mt-3">
