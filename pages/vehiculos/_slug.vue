@@ -11,6 +11,9 @@
         </li>
       </ol>
     </nav>
+    <h4 v-if="vehiculo" class="mb-4">
+      Detalles de {{ vehiculo.anno }} {{ vehiculo.marca }} {{ vehiculo.modelo }}
+    </h4>
     <div v-if="vehiculo" class="row">
       <div class="col-12 col-lg-6">
         <div class="card bg-light mb-3">
@@ -163,7 +166,7 @@ export default {
   },
   data() {
     return {
-      title: 'Detalles de Vehículo'
+      title: 'Detalles de Vehículo ' + this.$route.params.slug
     }
   },
   head() {
