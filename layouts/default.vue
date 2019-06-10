@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h-100 d-flex flex-column">
     <b-navbar toggleable="sm" type="dark" variant="dark">
       <b-container>
         <nuxt-link class="navbar-brand" to="/">XIAO</nuxt-link>
@@ -25,6 +25,42 @@
       </b-container>
     </b-navbar>
     <nuxt />
+    <footer class="footer mt-auto font-small unique-color-dark">
+      <div class="container text-center text-md-left mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">XIAO PROTO</h6>
+            <hr
+              class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px;"
+            />
+            <p>
+              Avisos de Clasificados de Vehículos en Chile.
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase font-weight-bold">Enlaces</h6>
+            <hr
+              class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px;"
+            />
+            <p>
+              <nuxt-link to="/">Inicio</nuxt-link>
+            </p>
+            <p>
+              <nuxt-link to="/vehiculos">Vehículos</nuxt-link>
+            </p>
+            <p>
+              <nuxt-link to="/categorias">Categorías</nuxt-link>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">
+        2019
+        <nuxt-link to="/">xiao-proto.herokuapp.com</nuxt-link>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -50,5 +86,16 @@ svg:not(:root).svg-inline--fa {
   font-size: inherit;
   height: 1em;
   vertical-align: -0.125em;
+}
+html,
+body,
+#__nuxt,
+#__layout {
+  height: 100%;
+}
+.footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
 }
 </style>
