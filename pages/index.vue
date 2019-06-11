@@ -36,7 +36,7 @@
                   <nuxt-link
                     class="btn btn-sm btn-outline-secondary btn-block"
                     :to="`/vehiculos/${item.slug}`"
-                    >Ver detalles</nuxt-link
+                    >Ver Detalles</nuxt-link
                   >
                 </div>
               </div>

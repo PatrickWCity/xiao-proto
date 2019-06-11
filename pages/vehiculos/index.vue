@@ -43,7 +43,7 @@
                       :to="`/vehiculos/${item.slug}`"
                       class="btn btn-success btn-block"
                     >
-                      ver detalles
+                      Ver Detalles
                     </nuxt-link>
                   </div>
                 </div>
