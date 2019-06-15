@@ -49,11 +49,13 @@ npm run generate
 npm test
 ```
 
+For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
 ## Author
 
 👤 **Patrick Ciudad &lt;PatrickWCity@gmail.com&gt; (https://PatrickWCity.com)**
 
-* Facebook: [PatrickWCity](https://github.com/PatrickWCity)
+* Facebook: [PatrickWCity](https://www.facebook.com/PatrickWCity)
 * Twitter: [@PatrickWCity](https://twitter.com/PatrickWCity)
 * YouTube: [PatrickWCity](https://www.youtube.com/PatrickWCity)
 * LinkedIn: [PatrickCiudad](https://www.linkedin.com/in/PatrickCiudad)
