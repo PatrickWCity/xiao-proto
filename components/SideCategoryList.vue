@@ -16,7 +16,7 @@
         </svg>
         Categorias
       </div>
-      <ul class="list-group category_block">
+      <ul class="list-group">
         <li v-for="item in categorias" :key="item.id" class="list-group-item">
           <nuxt-link :to="`/categorias/${item.slug}`" active-class="active">
             {{ item.nombre }}

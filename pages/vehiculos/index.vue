@@ -8,9 +8,37 @@
     </nav>
     <div class="row">
       <SideCategoryList />
-      <div class="col">
-        <h4 class="mb-4">Listado de Vehículos</h4>
-        <div class="row">
+      <div class="col col-xl-10 col-lg-9 col-md-8 col-sm-7">
+        <h4 class="mb-4">
+          Listado de Vehículos<a class="nav-link float-right" @click="toggle()"
+            ><svg
+              v-if="!view"
+              aria-hidden="true"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              class="svg-inline--fa fa-w-16"
+            >
+              <path
+                fill="currentColor"
+                d="M80 368H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm0-320H16A16 16 0 0 0 0 64v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16V64a16 16 0 0 0-16-16zm0 160H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm416 176H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"
+              ></path>
+            </svg>
+            <svg
+              v-if="view"
+              aria-hidden="true"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              class="svg-inline--fa fa-w-16"
+            >
+              <path
+                fill="currentColor"
+                d="M296 32h192c13.255 0 24 10.745 24 24v160c0 13.255-10.745 24-24 24H296c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24zm-80 0H24C10.745 32 0 42.745 0 56v160c0 13.255 10.745 24 24 24h192c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24zM0 296v160c0 13.255 10.745 24 24 24h192c13.255 0 24-10.745 24-24V296c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm296 184h192c13.255 0 24-10.745 24-24V296c0-13.255-10.745-24-24-24H296c-13.255 0-24 10.745-24 24v160c0 13.255 10.745 24 24 24z"
+              ></path></svg
+          ></a>
+        </h4>
+        <div v-if="!view" class="row">
           <div
             v-for="item in vehiculos"
             :key="item.id"
@@ -51,6 +79,41 @@
             </div>
           </div>
         </div>
+        <div v-if="view" class="row">
+          <div v-if="view" class="table-responsive col">
+            <table id="listado" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Marca</th>
+                  <th>Modelo</th>
+                  <th>Año</th>
+                  <th>Precio</th>
+                  <th>Tipo</th>
+                  <th>Estado</th>
+                  <th class="text-center">Operaciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="item in vehiculos" :key="item.id">
+                  <td>{{ item.marca }}</td>
+                  <td>{{ item.modelo }}</td>
+                  <td>{{ item.anno }}</td>
+                  <td>{{ item.precio.toLocaleString('es') }} $CLP</td>
+                  <td>{{ item.tipo }}</td>
+                  <td>{{ item.estado }}</td>
+                  <td role="text-center">
+                    <nuxt-link
+                      :to="`/vehiculos/${item.slug}`"
+                      class="btn btn-success btn-block"
+                    >
+                      Ver Detalles
+                    </nuxt-link>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -70,7 +133,7 @@ export default {
     }
   },
   computed: {
-    ...mapState('vehiculos', ['vehiculos']),
+    ...mapState('vehiculos', ['vehiculos', 'view']),
     ...mapGetters('vehiculos', ['countVehiculos', 'getVehiculosPorListado'])
   },
   head() {
@@ -99,7 +162,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions('vehiculos', ['getAllVehiculos'])
+    ...mapActions('vehiculos', ['getAllVehiculos', 'toggle'])
   }
 }
 </script>

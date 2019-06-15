@@ -1,7 +1,8 @@
 import { db } from '~/plugins/firebase'
 
 export const state = () => ({
-  vehiculos: []
+  vehiculos: [],
+  view: false
 })
 
 export const getters = {
@@ -19,6 +20,9 @@ export const getters = {
 export const mutations = {
   SETVEHICULOS(state, data) {
     state.vehiculos = data
+  },
+  SETVIEW(state) {
+    state.view = !state.view
   }
 }
 
@@ -56,5 +60,8 @@ export const actions = {
   stopListening() {
     const unsub = db.collection('vehiculos').onSnapshot(() => {})
     unsub()
+  },
+  toggle({ commit }) {
+    commit('SETVIEW')
   }
 }
